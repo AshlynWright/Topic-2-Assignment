@@ -44,13 +44,17 @@ namespace Topic_2_Assignment
 
         protected override void LoadContent()
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+            {
+                _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+                // TODO: use this.Content to load your game content here
 
-            circleTexture = Content.Load<Texture2D>("circle");
-            rectangleTexture = Content.Load<Texture2D>("rectangle");
-            titleFont = Content.Load<SpriteFont>("Title");
+                circleTexture = Content.Load<Texture2D>("circle");
+                rectangleTexture = Content.Load<Texture2D>("rectangle");
+                titleFont = Content.Load<SpriteFont>("Title");
+
+            }
+           
 
         }
 
@@ -68,16 +72,12 @@ namespace Topic_2_Assignment
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            
 
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(circleTexture, headRect, Color.Yellow);
-            _spriteBatch.Draw(circleTexture, leftEyeRect, Color.Black);
-            _spriteBatch.Draw(circleTexture, rightEyeRect, Color.Black);
-            _spriteBatch.Draw(rectangleTexture, mouthRect, Color.Black);
-
-            _spriteBatch.DrawString(titleFont, "SMILE", new Vector2(340, 355), Color.White);
+            _spriteBatch.Draw(circleTexture, new Rectangle(10, 10, 100, 200), Color.Red);
+           _spriteBatch.Draw(rectangleTexture, new Rectangle(20, 10, 100, 200), Color.White);
 
             _spriteBatch.End();
 
