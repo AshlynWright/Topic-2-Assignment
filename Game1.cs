@@ -18,8 +18,8 @@ namespace Topic_2_Assignment
 
         Rectangle headRect, mouthRect, leftEyeRect, rightEyeRect;
 
-        private SpriteFont font;
-        private int Hello = 0;
+       
+       
 
 
 
@@ -57,7 +57,7 @@ namespace Topic_2_Assignment
 
                 circleTexture = Content.Load<Texture2D>("whitecircle");
                 rectangleTexture = Content.Load<Texture2D>("whiterectangle");
-                font = Content.Load<SpriteFont>("Hello");
+                titleFont = Content.Load<SpriteFont>("TextFont");
 
             }
            
